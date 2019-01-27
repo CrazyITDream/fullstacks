@@ -1,0 +1,120 @@
+字符格式化输出：
+        占位符 %s s=string
+               %d d=digit   整数
+               %f f=float   浮点数，约等于小数
+数据运算
+        数据类型的初识：
+            1、数字
+                   整数 int(integer)
+                      整型
+                      长整型
+                      in py3 已经不区分整型和长整型，统一都叫整型
+            2、字符串
+                布尔类型
+                    真 True
+                    假 false
+                字符串
+                    salary.isdigit()
+                    计算机中，皆为对象，一切对象皆可分类
+                    string 操作
+                    1、重复输出对字符串进行乘法计算
+                    2、通过索引获取字符串中字符，这里和列表的切片操作时相同的，具体内容见列表
+                        print('Hello Wold'[2:])
+                    3、判断字符串是否在字符串中
+                        关键字in
+                        print(123 in[123,45,424])
+                    4、字符格式化输出
+                        print('My  name is:%s '%name)
+                    5、字符串合并
+                        新的字符串=字符一+字符串二
+                        新的字符串='对象'.join([字符串1,字符串2,......])
+                    6、字符串的其它方法
+                           * 统计某个字符的个数：返回值=字符串.count('某个字符')
+                           * 首字母大写： 返回值=字符串.capitalize()
+                           * 将字符串居中：返回值=字符串.center('sizeof','start','end')
+                           判断是否以某个内容结尾：返回值=字符串.endswith('字符')
+                           * 判断是否已某个内容开头：返回值=字符串.startswitch('字符')
+                           设置tab的sizeof长度：字符串.expandtable(tablesize=长度)
+                           * 查找某个字符在字符串的位置：返回值=字符串.find('字符')
+                           * 对字符串进行格式化输出：字符串.format((字符'字符值',字符=数值))
+                                                    字符串.format_map(字典)
+                           查找字符的位置：返回值（位置）= 字符串.index('某个字符')
+                           判断是否是字母或者数字：返回值（True、false）= 字符串.isalnum()
+                           判断是不是十进制：返回值（True、False）= 字符串.isdecimal()
+                           判断是不是像一个数字：返回值（True、False）= 对象.isdigit()
+                                                 返回值（True、False）= 对象.ismumeric()
+                           判断是否是非法字符：返回值（True、False）= 对象.isidentifier()
+                           * 判断是不是全小写：返回值（True、False）= 对象.islower()
+                           * 判断是不是全大写：返回值（True、False）= 对象.isupper()
+                           * 判断是不是含有空格：返回值（True、False）= 对象.isspace()
+                           判断是不是标题：返回（True、False）= 对象.istitle()
+                           将大写转成小写：对象.lower()
+                           将小写转成大写：对象.upper()
+                           将大写转成小写，小写转成大写：对象.swapcase()
+                           补充字符：对象.ljust()左边
+                           补充字符：对象.rjust()右边
+                           * 去掉换行符、空格：对象.stricp()
+                           * 替换内容：对象.replace('替换的内容','想要替换掉的内容')
+                           查找某个字符的位置：对象.rfind('某个字符')
+                           * 按照某个字符将内容分开：对象.split('某个字符',开始)
+                           按照标题格式进行，每一个单词开头大写：对象.title()
+
+                列表，元组(代表程序，购物车，字典，三级菜单)
+                    列表的操作：增删改查（主要通过索引实现）
+                        查  切片表达中负数表示是从尾部开始往回数
+                            name['小火 ','卓权 ','仁鸿 ','达达 ']
+                            print(name[1:1])表示取到最后
+                            print(name[1:-1])表示取到倒数第二个
+                            print(name[1:-1:1])表示从左到右一个一个取
+                            print(name[1::2])表示从左到右隔一个取一个（取步长为2的名字）
+                            print(name[3::-2])表示从后面往前取，隔一个取一个(取步长为2的列表字符)
+                            print("想要查找的元素"，in 列表)查找元素是否在列表里面
+                        增
+                            .append(只能添加到尾部)
+                            .insert(跟一个索引，可以添加到任何位置)
+                        修改
+                            用索引的方法，拿到值，然后对拿到的值进行赋值就可以修改
+                            a[index]="新的值"
+                            a[start:end]=["start","end"]
+                        删除
+                             .remove('删除内容')  不能进行切片操作
+                             .pop(索引值)   删除索引值的字符,（不指定删除,即删除最后一个）
+                             .del(下标值)   删除下标的字符
+                             .del 对象      删除所有并删除对象
+                             .claer()       清空列表
+                .count:计算元素出现次数
+                .extend:合并两个字符
+                .index:根据内容找元素对应的下标
+                .sort:对列表进行排序，从小到大对元素进行排序
+                .sorted(列表名)对列表排序有返回值
+                +与extend的区别:+不改变两个列表的值，extend会改变一方的值
+循环loop
+    无限循环，次数限制
+    无限循环(死循环)
+for循环
+while循环
+break(终止循环),continue(继续)
+
+for循环写法为：
+        for 定义变量 range(start,end):
+        for 定义变量 in 序列:
+while 条件:
+    循环语句
+continue  结束本次循环，继续下一次循环
+break 跳出整个当前的循环,只能跳出一层循环
+
+跳出双层循环案例：
+        exit_flag = False
+for i in range(10):
+     if i<5:
+         continue
+     print(i)
+     for j in range(10):
+         print("layer 2",j)
+         if j==6:
+             exit_flag = True
+             break
+     if exit_flag:
+          break
+
+
